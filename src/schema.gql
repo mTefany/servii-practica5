@@ -1,0 +1,39 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Deportista {
+  id: ID!
+  nombre: String!
+  peso: String!
+  altura: String!
+  edad: String!
+  estado: Boolean!
+}
+
+type Query {
+  deportistas(id: ID!): Deportista!
+}
+
+type Mutation {
+  createDeportista(createDeportistaInput: CreateDeportistaInput!): Deportista!
+  updateDeportista(updateDeportistaInput: UpdateDeportistaInput!): Deportista!
+  removeDeportista(id: ID!): Deportista!
+}
+
+input CreateDeportistaInput {
+  nombre: String!
+  peso: String!
+  altura: String!
+  edad: String!
+  estado: Boolean!
+}
+
+input UpdateDeportistaInput {
+  nombre: String
+  peso: String
+  altura: String
+  edad: String
+  estado: Boolean
+  id: ID!
+}
